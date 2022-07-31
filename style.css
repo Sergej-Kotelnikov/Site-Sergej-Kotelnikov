@@ -1,0 +1,545 @@
+/*
+Global
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* Preloader*/
+.prebody {
+  overflow: hidden;
+}
+
+.preloader {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.cssload-thecube {
+  width: 73px;
+  height: 73px;
+  margin: 0 auto;
+  margin-top: 49px;
+  position: relative;
+  transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+}
+.cssload-thecube .cssload-cube {
+  position: relative;
+  transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+}
+.cssload-thecube .cssload-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+.cssload-thecube .cssload-cube:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(43, 160, 199);
+  animation: cssload-fold-thecube 2.76s infinite linear both;
+  -o-animation: cssload-fold-thecube 2.76s infinite linear both;
+  -ms-animation: cssload-fold-thecube 2.76s infinite linear both;
+  -webkit-animation: cssload-fold-thecube 2.76s infinite linear both;
+  -moz-animation: cssload-fold-thecube 2.76s infinite linear both;
+  transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+}
+.cssload-thecube .cssload-c2 {
+  transform: scale(1.1) rotateZ(90deg);
+  -o-transform: scale(1.1) rotateZ(90deg);
+  -ms-transform: scale(1.1) rotateZ(90deg);
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+  -moz-transform: scale(1.1) rotateZ(90deg);
+}
+.cssload-thecube .cssload-c3 {
+  transform: scale(1.1) rotateZ(180deg);
+  -o-transform: scale(1.1) rotateZ(180deg);
+  -ms-transform: scale(1.1) rotateZ(180deg);
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+  -moz-transform: scale(1.1) rotateZ(180deg);
+}
+.cssload-thecube .cssload-c4 {
+  transform: scale(1.1) rotateZ(270deg);
+  -o-transform: scale(1.1) rotateZ(270deg);
+  -ms-transform: scale(1.1) rotateZ(270deg);
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+  -moz-transform: scale(1.1) rotateZ(270deg);
+}
+.cssload-thecube .cssload-c2:before {
+  animation-delay: 0.35s;
+  -o-animation-delay: 0.35s;
+  -ms-animation-delay: 0.35s;
+  -webkit-animation-delay: 0.35s;
+  -moz-animation-delay: 0.35s;
+}
+.cssload-thecube .cssload-c3:before {
+  animation-delay: 0.69s;
+  -o-animation-delay: 0.69s;
+  -ms-animation-delay: 0.69s;
+  -webkit-animation-delay: 0.69s;
+  -moz-animation-delay: 0.69s;
+}
+.cssload-thecube .cssload-c4:before {
+  animation-delay: 1.04s;
+  -o-animation-delay: 1.04s;
+  -ms-animation-delay: 1.04s;
+  -webkit-animation-delay: 1.04s;
+  -moz-animation-delay: 1.04s;
+}
+
+@keyframes cssload-fold-thecube {
+  0%,
+  10% {
+    transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes cssload-fold-thecube {
+  0%,
+  10% {
+    -o-transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -o-transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -o-transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes cssload-fold-thecube {
+  0%,
+  10% {
+    -ms-transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -ms-transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -ms-transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cssload-fold-thecube {
+  0%,
+  10% {
+    -webkit-transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -webkit-transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -webkit-transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes cssload-fold-thecube {
+  0%,
+  10% {
+    -moz-transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -moz-transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -moz-transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+/* Main */
+.hero {
+  min-height: 100vh;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.first-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 15vh;
+  min-width: 100vw;
+  position: fixed;
+  z-index: 2;
+  transition: all 1s ease-in-out;
+}
+.sticky {
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+  background-color: black;
+  transition: all 1.2s ease-in-out;
+  min-height: 5vh;
+}
+.second-container {
+  display: flex;
+  min-width: 100vw;
+  margin-top: 20rem;
+}
+
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -1;
+}
+.logo {
+  padding: 1rem;
+  text-align: center;
+  align-items: center;
+  flex: 1 1 10rem;
+}
+nav {
+  padding: 1rem;
+  background-color: transparent;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 10rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  padding: 1rem;
+  margin: 0.1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  transition: all 0.5s ease-out;
+}
+nav ul li a {
+  font-size: 1.6rem;
+}
+nav ul li:hover {
+  opacity: 0.7;
+  color: rgb(255, 255, 255);
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 10rem;
+}
+.name1 {
+  display: flex;
+  flex: 1 1 10rem;
+}
+.name a {
+  font-size: 5rem;
+  color: white;
+  font-weight: 400;
+  pointer-events: none;
+}
+.name p {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.name #contact-me {
+  pointer-events: all;
+  font-size: 3.1rem;
+  font-weight: 300;
+  background-color: white;
+  color: black;
+  padding: 1.2rem 5rem;
+  border-radius: 4rem;
+  transition: all 1s ease-in-out;
+  width: fit-content;
+}
+.name #contact-me:hover {
+  color: white;
+  background-color: black;
+  transition: all 1s ease-in-out;
+}
+.active {
+  color: rgb(255, 255, 255);
+  padding: 1rem 2rem;
+  border: 0.1rem solid white;
+  font-weight: bold;
+  transition: all 0.5s ease-out;
+  border-radius: 5rem;
+}
+
+/* About me  photo*/
+.about-me {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20rem;
+  margin-bottom: 12rem;
+}
+.about-me span {
+  font-weight: bold;
+}
+.about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.about-header p {
+  padding-bottom: 6rem;
+  font-size: 3.9rem;
+  font-weight: 400;
+}
+.text-first {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 12rem;
+}
+.text-first .p-1 {
+  margin-bottom: 7rem;
+}
+.text-first .p-2 {
+  margin-top: 7rem;
+}
+.text-second {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 11rem;
+}
+.text-second #p-1 {
+  margin-bottom: 4rem;
+}
+.text-second #p-2 {
+  margin-top: 4rem;
+}
+
+/* About me gif stats */
+.specialization {
+  min-height: 16vh;
+  width: 90%;
+  margin: 0 0 0 auto;
+}
+.specialization img {
+  width: 100%;
+}
+.specialization p {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+/* About skills */
+.skills {
+  width: 90%;
+  margin: 0 0 0 auto;
+  min-height: 40vh;
+  margin-top: 10rem;
+}
+.soft {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.skill-bar div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+.skill-bar div p {
+  display: flex;
+  flex: 0.1 0.1 10rem;
+}
+.skill-bar div img {
+  display: flex;
+}
+
+/*Education */
+
+.education {
+  width: 90%;
+  margin: 0 0 0 auto;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.education span {
+  font-weight: 700;
+}
+.educ {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  align-items: center;
+}
+.year {
+  font-size: 2rem;
+  font-weight: 500;
+  width: 20%;
+}
+.place {
+  font-size: 1.6rem;
+}
+.educ-info {
+  display: column;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.educ-1 {
+  display: flex;
+  padding-bottom: 7rem;
+  line-height: 3.4rem;
+  align-items: center;
+}
+.educ-2 {
+  display: flex;
+  padding-bottom: 7rem;
+  line-height: 3.4rem;
+  align-items: center;
+}
+.educ-3 {
+  display: flex;
+  padding-bottom: 7rem;
+  align-items: center;
+}
+.line {
+  padding-bottom: 1rem;
+}
+
+.educ-4 {
+  display: flex;
+  line-height: 3.4rem;
+  align-items: center;
+}
+.place {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.place img {
+  margin-right: 3rem;
+}
+
+/* Illustrations */
+.illustrations {
+  min-height: 100vh;
+  margin: auto;
+  margin-top: 20rem;
+}
+
+.illustrations-header {
+  min-height: 10vh;
+  width: 90%;
+  margin: 0 0 0 auto;
+  display: flex;
+  align-items: center;
+  font-size: 3.9rem;
+  font-weight: 400;
+}
+.gallery-container {
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+}
